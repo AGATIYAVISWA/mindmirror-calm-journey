@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Lightbulb, Heart, Refresh2, CheckCircle } from 'lucide-react';
+import { Lightbulb, Heart, RefreshCw, CheckCircle } from 'lucide-react';
 
 const Tips = () => {
   const [currentTipIndex, setCurrentTipIndex] = useState(0);
@@ -94,7 +93,7 @@ const Tips = () => {
                   onClick={getNewTip}
                   className="bg-gradient-to-r from-gentle-green to-green-400 hover:from-green-400 hover:to-green-500 text-white smooth-transition"
                 >
-                  <Refresh2 className="mr-2" size={16} />
+                  <RefreshCw className="mr-2" size={16} />
                   More Tips
                 </Button>
                 <Button 
