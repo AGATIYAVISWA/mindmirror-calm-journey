@@ -64,6 +64,11 @@ export default {
 				'rose-gold': 'rgb(244 114 182)',
 				'teal-cyan': 'rgb(6 182 212)',
 				'lavender-mist': 'rgb(196 181 253)',
+				'calm-blue': 'rgb(59 130 246)',
+				'gentle-green': 'rgb(16 185 129)',
+				'soft-lavender': 'rgb(139 69 255)',
+				'warm-peach': 'rgb(251 146 60)',
+				'soothing-mint': 'rgb(6 182 212)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
