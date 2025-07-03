@@ -56,11 +56,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'calm-blue': 'rgb(147 197 253)',
-				'soft-lavender': 'rgb(221 214 254)',
-				'gentle-green': 'rgb(187 247 208)',
-				'warm-peach': 'rgb(254 215 170)',
-				'soothing-mint': 'rgb(209 250 229)',
+				'electric-blue': 'rgb(59 130 246)',
+				'vibrant-purple': 'rgb(139 69 255)',
+				'coral-pink': 'rgb(255 107 107)',
+				'emerald-green': 'rgb(16 185 129)',
+				'sunset-orange': 'rgb(251 146 60)',
+				'rose-gold': 'rgb(244 114 182)',
+				'teal-cyan': 'rgb(6 182 212)',
+				'lavender-mist': 'rgb(196 181 253)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -97,7 +100,7 @@ export default {
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(10px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -109,24 +112,44 @@ export default {
 						transform: 'translateY(0)'
 					},
 					'50%': {
-						transform: 'translateY(-5px)'
+						transform: 'translateY(-8px)'
 					}
 				},
 				'pulse-soft': {
 					'0%, 100%': {
-						opacity: '1'
+						opacity: '1',
+						transform: 'scale(1)'
 					},
 					'50%': {
-						opacity: '0.8'
+						opacity: '0.8',
+						transform: 'scale(1.02)'
+					}
+				},
+				'rainbow': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px rgba(139, 69, 255, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px rgba(139, 69, 255, 0.6), 0 0 60px rgba(255, 107, 107, 0.3)'
 					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out',
-				'gentle-bounce': 'gentle-bounce 2s ease-in-out infinite',
-				'pulse-soft': 'pulse-soft 2s ease-in-out infinite'
+				'fade-in': 'fade-in 0.8s ease-out',
+				'gentle-bounce': 'gentle-bounce 3s ease-in-out infinite',
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'rainbow': 'rainbow 3s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
+			},
+			backgroundSize: {
+				'300%': '300%'
 			}
 		}
 	},

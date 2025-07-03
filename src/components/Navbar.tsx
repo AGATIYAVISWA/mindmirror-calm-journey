@@ -21,56 +21,58 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/20">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 smooth-transition hover:scale-105">
-            <div className="w-8 h-8 bg-gradient-to-r from-calm-blue to-soft-lavender rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">M</span>
+          <Link to="/" className="flex items-center space-x-3 smooth-transition hover:scale-105 hover-glow">
+            <div className="w-10 h-10 bg-gradient-to-r from-vibrant-purple via-coral-pink to-electric-blue rounded-xl flex items-center justify-center shadow-lg">
+              <span className="text-white font-bold text-lg">M</span>
             </div>
-            <span className="text-xl font-semibold text-primary-foreground">MindMirror</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-vibrant-purple to-coral-pink bg-clip-text text-transparent">
+              MindMirror
+            </span>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-2">
             {navItems.map(({ path, icon: Icon, label }) => (
               <Link
                 key={path}
                 to={path}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-lg smooth-transition ${
+                className={`flex items-center space-x-2 px-5 py-3 rounded-xl smooth-transition hover-glow ${
                   location.pathname === path
-                    ? 'bg-calm-blue/20 text-primary-foreground'
-                    : 'hover:bg-calm-blue/10 text-muted-foreground hover:text-primary-foreground'
+                    ? 'bg-gradient-to-r from-vibrant-purple/20 to-coral-pink/20 text-vibrant-purple shadow-lg'
+                    : 'hover:bg-gradient-to-r hover:from-vibrant-purple/10 hover:to-coral-pink/10 text-gray-600 hover:text-vibrant-purple'
                 }`}
               >
-                <Icon size={18} />
-                <span className="text-sm font-medium">{label}</span>
+                <Icon size={20} />
+                <span className="font-medium">{label}</span>
               </Link>
             ))}
           </div>
 
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg hover:bg-calm-blue/10 smooth-transition"
+            className="p-3 rounded-xl hover:bg-gradient-to-r hover:from-vibrant-purple/10 hover:to-coral-pink/10 smooth-transition hover-glow"
             aria-label="Toggle theme"
           >
-            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
           {/* Mobile menu */}
-          <div className="md:hidden fixed bottom-4 left-4 right-4 glass-card rounded-2xl p-2">
+          <div className="md:hidden fixed bottom-6 left-4 right-4 glass-card rounded-2xl p-3 stunning-shadow">
             <div className="flex justify-around">
               {navItems.map(({ path, icon: Icon, label }) => (
                 <Link
                   key={path}
                   to={path}
-                  className={`flex flex-col items-center p-2 rounded-lg smooth-transition ${
+                  className={`flex flex-col items-center p-3 rounded-xl smooth-transition ${
                     location.pathname === path
-                      ? 'bg-calm-blue/20 text-primary-foreground'
-                      : 'text-muted-foreground hover:text-primary-foreground'
+                      ? 'bg-gradient-to-r from-vibrant-purple/20 to-coral-pink/20 text-vibrant-purple'
+                      : 'text-gray-600 hover:text-vibrant-purple hover:bg-gradient-to-r hover:from-vibrant-purple/10 hover:to-coral-pink/10'
                   }`}
                 >
-                  <Icon size={18} />
-                  <span className="text-xs mt-1">{label}</span>
+                  <Icon size={20} />
+                  <span className="text-xs mt-1 font-medium">{label}</span>
                 </Link>
               ))}
             </div>
